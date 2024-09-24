@@ -131,7 +131,7 @@ async def handle_message(client, message):
 # -------------------------------------------------------------------------------------
 @app.on_edited_message(filters.group & ~filters.me)
 async def delete_edited_messages(client, edited_message):
-    await edited_message.delete(f"@{message.from_user.username} i am here baby plz don't edit your msg 🥲 love uh")
+    await edited_message.delete()
 
 
 
