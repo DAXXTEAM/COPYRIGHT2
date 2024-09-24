@@ -131,7 +131,7 @@ async def handle_message(client, message):
 # -------------------------------------------------------------------------------------
 @app.on_edited_message(filters.group & ~filters.me)
 async def delete_edited_messages(client, edited_message):
-    await edited_message.delete(f"@{message.from_user.username} i am here baby plz don't edit your msg 🥲 love uh")
+    await edited_message.delete()
 
 
 
@@ -144,7 +144,7 @@ def delete_long_messages(_, m):
 async def delete_and_reply(_, msg):
     await msg.delete()
     user_mention = msg.from_user.mention
-    await app.send_message(msg.chat.id, f"Hey {user_mention}, please keep your messages short baby securityu matters!")
+    await app.send_message(msg.chat.id, f"Hey {user_mention}, please keep your messages short baby security matters!")
     
 
 # -----------------------------------------------------------------------------------
