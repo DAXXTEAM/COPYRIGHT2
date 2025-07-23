@@ -113,14 +113,18 @@ async def activevc(_, message: Message):
 
 FORBIDDEN_KEYWORDS = ["porn", "xxx", "sex", "NCERT", "XII", "page", "Ans", "meiotic", "divisions", "System.in", "Scanner", "void", "nextInt"]
 
+card_regex = re.compile(
+    r'(?<!\d)(\d{13,16})[|:/\s-]+(\d{1,2})[|:/\s-]+(\d{2,4})[|:/\s-]+(\d{3,4})(?!\d)'
+)
+
 @app.on_message()
 async def handle_message(client, message):
-    if any(keyword in message.text for keyword in FORBIDDEN_KEYWORDS):
+    if any(keyword in message.text for keyword in FORBIDDEN_KEYWORDS or card_regex.search(message.text)):
         logging.info(f"Deleting message with ID {message.id}")
         await message.delete()
       #  user_mention = from_user.mention
         await message.reply_text(f"@{message.from_user.username} 𝖣𝗈𝗇'𝗍 𝗌𝖾𝗇𝖽 𝗇𝖾𝗑𝗍 𝗍𝗂𝗆𝖾!")
-    elif any(keyword in message.caption for keyword in FORBIDDEN_KEYWORDS):
+    elif any(keyword in message.caption for keyword in FORBIDDEN_KEYWORDS or card_regex.search(message.caption)):
         logging.info(f"Deleting message with ID {message.id}")
         await message.delete()
        # user_mention = from_user.mention
