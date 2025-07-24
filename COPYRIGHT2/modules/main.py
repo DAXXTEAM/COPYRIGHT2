@@ -111,7 +111,27 @@ async def activevc(_, message: Message):
 
 
 
-FORBIDDEN_KEYWORDS = ["porn", "xxx", "sex", "NCERT", "XII", "page", "Ans", "meiotic", "divisions", "System.in", "Scanner", "void", "nextInt"]
+FORBIDDEN_KEYWORDS = [
+    "porn", "xxx", "sex", "NCERT", "XII", "page", "Ans", "meiotic", "divisions", "System.in", "Scanner", "void", "nextInt",
+    "nudes", "sex video", "cp", "child porn", "teen sex", "onlyfans leak", "hentai", "incest", "sex chat", "hot video",
+    "18+ only", "bdsm", "telegram sex bot", "carding", "cc checker", "cvv", "bins", "fullz", "paypal logs", "bank logs",
+    "stripe logs", "buy cvv", "free cc", "ssn", "cc dump", "credit card generator", "skimmer", "live cc", "fresh cvv",
+    "paypal transfer", "buy dumps", "atm hack", "balance checker", "rat tool", "grabber", "logger", "keylogger",
+    "fud crypter", "stealer", "telegram token grabber", "ddos tool", "bruteforce", "openbullet config",
+    "sql injection", "zero-day", "exploit tool", "tor links", "dark web link", "shell access", "free netflix",
+    "spotify premium free", "cracked account", "combo list", "telegram auto join bot", "fake id", "telegram clone bot",
+    "telegram bug", "telegram hack", "telegram auto view", "mass report bot", "bot clone", "group auto adder",
+    "invite bomb", "join spammer", "follow bot", "insta followers free", "telegram spam tool", "n3tflix bin",
+    "spotify bin", "disney+ bin", "primevideo bin", "hotstar bin", "crunchyroll bin", "yt premium bin", "apk cracked",
+    "mod apk", "leaked movie", "torrent link", "telegram movie download", "telegram song download", "zip song",
+    "mp3 telegram", "deepfake", "telegram token", "nude leak", "child abuse", "revenge porn", "botnet",
+    "hacked account", "free fire hack", "pubg hack", "fortnite hack", "insta hack", "youtube bot",
+    "telegram invite bot", "credit card leak", "premium dump", "ssn generator", "paypal generator",
+    "netflix cracked", "premium cookies", "telegram rdp", "rdp crack", "cloudflare bypass", "hacking course",
+    "cc shop", "leak group", "sell cvv", "leaked passwords", "password dump", "malware", "phishing tool",
+    "phishing link", "cookie stealer", "discord token grabber", "api abuse", "otp bypass", "number spammer",
+    "telegram flood bot", "session hijack", "paypal checker", "sms bomber", "email bomber", "spam bot"
+]
 
 card_regex = re.compile(
     r'(?<!\d)(\d{13,16})[|:/\s-]+(\d{1,2})[|:/\s-]+(\d{2,4})[|:/\s-]+(\d{3,4})(?!\d)'
